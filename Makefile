@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-I. -std=c99 -g
-DEPS = xsort.h test_data.h
+DEPS = xsort.h
 OBJ = main.o xsort.o 
 
 %.o: %.c $(DEPS)
