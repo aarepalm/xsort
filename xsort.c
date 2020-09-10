@@ -11,6 +11,11 @@ void xsort(int *input, int count) {
         printf("ERR: nullptr received.\n");
         return;
     }
+    if (!count) {
+        printf("WARN: input array empty.\n");
+        return;
+    }
+
     int bitmap[BITMAP_SIZE] = {0};
 
     /* Push to bitmap, this automatically allows sorted readout. */
