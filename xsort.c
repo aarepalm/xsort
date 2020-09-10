@@ -11,10 +11,6 @@ void xsort(int *input, int count) {
         printf("ERR: nullptr received.\n");
         return;
     }
-    if (count > INPUT_ARRAY_MAX_SIZE) {
-        printf("WARN: Input array size out of range, nof items dropped: %d \n", (count - INPUT_ARRAY_MAX_SIZE));
-    }
-
     int bitmap[BITMAP_SIZE] = {0};
 
     /* Push to bitmap, this automatically allows sorted readout. */
@@ -36,6 +32,9 @@ void xsort(int *input, int count) {
         if (bitmap[i / BITS_IN_INT] & (1 << (i % BITS_IN_INT))) {
             printf("%d ", i);
         }
+    }
+    if (count > INPUT_ARRAY_MAX_SIZE) {
+        printf("\nWARN: Input array size out of range, nof items dropped: %d ", (count - INPUT_ARRAY_MAX_SIZE));
     }
     printf("\n");
 }
