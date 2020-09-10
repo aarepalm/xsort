@@ -9,7 +9,7 @@
  * Duplicates don't break the function either, these are handled by merging.
  *
  * This function implements bitvector, where each value in input array sets a bit in
- * bitmap. When bitmap is iterated from start then all bits set to 1 represent valus from input
+ * bitvector. When bitvector is iterated from start then all bits set to 1 represent existing valus from input
  * array in ascending order.
  *
  * @param Input array, caller remains the owner of memory.
