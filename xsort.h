@@ -13,7 +13,7 @@
  * array in ascending order.
  *
  * @param Input array, caller remains the owner of memory.
- * @param Number of element in the input array. If value is over INPUT_ARRAY_MAX_SIZE then tail is cut.
+ * @param Number of elements in the input array. If value is over INPUT_ARRAY_MAX_SIZE then tail is cut.
  */
 void xsort(int *input, int count);
 
