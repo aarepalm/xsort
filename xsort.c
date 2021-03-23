@@ -33,9 +33,13 @@ void xsort(int *input, int count) {
 
     /* Printout. Iterate over all possible values and print out if relevant bit is set. */
     printf("\nSorted values: \n");
-    for (int i = 0; i < (BITMAP_SIZE*BITS_IN_INT); ++i) {
-        if (bitmap[i / BITS_IN_INT] & (1 << (i % BITS_IN_INT))) {
-            printf("%d ", i);
+    for (int i = 0; i < BITMAP_SIZE; ++i) {
+        if (bitmap[i]) {
+            for (int j = 0; j < BITS_IN_INT; ++j) {
+                if (bitmap[i] & (1 << j)) {
+                    printf("%ld ", i*BITS_IN_INT+j);
+                }
+            }
         }
     }
     if (count > INPUT_ARRAY_MAX_SIZE) {
